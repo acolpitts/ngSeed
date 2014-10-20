@@ -1,0 +1,8 @@
+<div class="list-group" ng-controller="CategoriesCtrl">
+    <a class="list-group-item"
+       ng-click="changeCategory(category.id)"
+       ng-repeat="category in departments">
+        {{category.name.substr(0,27)}}
+        <span class="badge">{{category.productCount}}</span>
+    </a>
+</div>
