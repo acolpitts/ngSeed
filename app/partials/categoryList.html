@@ -1,8 +1,14 @@
-<div class="list-group" ng-controller="CategoriesCtrl">
+<div ng-show="departments" class="list-group nav" ng-controller="CategoriesCtrl">
     <a class="list-group-item"
-       ng-click="changeCategory(category.id)"
-       ng-repeat="category in departments">
+       ng-click="changeCategory({id: 'departments'})"
+       ng-class="{active:currentCategory.id=='departments'}">
+       All
+    </a>
+    <a class="list-group-item"
+       ng-repeat="category in departments"
+       ng-click="changeCategory(category)"
+       ng-class="{active:currentCategory==category}">
         {{category.name.substr(0,27)}}
-        <span class="badge">{{category.productCount}}</span>
+        <!--<span class="badge">{{category.productCount}}</span>-->
     </a>
 </div>

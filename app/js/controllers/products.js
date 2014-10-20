@@ -3,8 +3,6 @@ function ProductsCtrl ($scope, $http, $modal, $log) {
     $scope.currentProduct = null;
 
     product_callback = function(data) {
-        // returning from async callbacks is (generally) meaningless
-        console.log(data);
         $scope.currentProduct = data;
 
         var modalInstance = $modal.open({
@@ -15,21 +13,14 @@ function ProductsCtrl ($scope, $http, $modal, $log) {
                     return $scope.currentProduct;
                 }
             }
-
         });
 
-
+        return true;
     }
 
     $scope.open = function (sku) {
-        //$log.info('ID: ' + sku);
-
         var url = "http://www.bestbuy.ca/api/v2/json/product/" + sku + "?callback=product_callback";
         $http.jsonp(url);
-
-
-
-
     };
 }
 

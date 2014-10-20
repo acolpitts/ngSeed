@@ -1,4 +1,4 @@
-var app = angular.module("bestbuyMVC", ['ngResource', 'ui.bootstrap']);
+var app = angular.module('bestbuyMVC', ['ngResource', 'ui.bootstrap']);
 
 app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, product) {
 

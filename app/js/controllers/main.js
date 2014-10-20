@@ -1,18 +1,23 @@
 function MainCtrl ($scope, $http) {
 
     $scope.sidebarURL = 'partials/categoryList.html';
+    $scope.currentCategory = {id: 'departments'};
+    $scope.products = null;
 
     onProducts = function(data) {
-        // returning from async callbacks is (generally) meaningless
-        console.log(data.subCategories);
         $scope.products = data.products;
     }
-
-    var url = "http://www.bestbuy.ca/api/v2/json/search?categoryid=departments&callback=onProducts";
-    $http.jsonp(url);
 
     $scope.loadProducts = function (catID) {
         var url = "http://www.bestbuy.ca/api/v2/json/search?categoryid=" + catID + "&callback=onProducts";
         $http.jsonp(url);
     }
+
+    $scope.changeCategory = function (cat) {
+        $scope.currentCategory = cat;
+        $scope.loadProducts(cat.id);
+    }
+
+    // Init view by loading all products
+    $scope.loadProducts('departments');
 }
