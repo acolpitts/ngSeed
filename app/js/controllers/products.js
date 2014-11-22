@@ -6,8 +6,8 @@ function ProductsCtrl ($scope, $http, $modal, $log) {
         $scope.currentProduct = data;
 
         var modalInstance = $modal.open({
-            templateUrl: 'productDetails.html',
-            controller: 'ModalInstanceCtrl',
+            templateUrl: 'partials/productDetails.html',
+            controller: 'ProductDetailsCtrl',
             resolve: {
                 product: function () {
                     return $scope.currentProduct;

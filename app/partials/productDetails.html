@@ -1,0 +1,12 @@
+<div class="modal-header">
+    <h3 class="modal-title">{{currentProduct.name}}</h3>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <img ng-src="{{imageURL}}" class="product-image" />
+        <p class="product-short-description">{{currentProduct.shortDescription}}</p>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">Close</button>
+</div>
