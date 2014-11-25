@@ -12,7 +12,7 @@ describe('E2E: ngSeedApp', function() {
     });
 
     it('should load the home page', function() {
-        var ele = by.id('home');
+        var ele = by.id('app-container');
         expect(ptor.isElementPresent(ele)).toBe(true);
     });
 

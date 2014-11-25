@@ -13,7 +13,7 @@ describe('Unit: ngSeed controllers', function() {
             ctrl = $controller('MainCtrl', {$scope:scope});
         }));
 
-        it('should have the correct sidebarURL', inject(function($controller) {
+        it('should have an array of 4 awesome things', inject(function($controller) {
             expect(scope.awesomeThings.length).toBe(4);
         }));
 
