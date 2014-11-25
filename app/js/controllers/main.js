@@ -1,23 +1,6 @@
-function MainCtrl ($scope, $http) {
+angular.module('ngSeedApp')
+  .controller('MainCtrl', function ($scope) {
 
-    $scope.sidebarURL = 'partials/categoryList.html';
-    $scope.currentCategory = {id: 'departments'};
-    $scope.products = null;
+    $scope.awesomeThings = ['AngularJS', 'Node.js', 'Karma', 'Protractor'];
 
-    onProducts = function(data) {
-        $scope.products = data.products;
-    }
-
-    $scope.loadProducts = function (catID) {
-        var url = "http://www.bestbuy.ca/api/v2/json/search?categoryid=" + catID + "&callback=onProducts";
-        $http.jsonp(url);
-    }
-
-    $scope.changeCategory = function (cat) {
-        $scope.currentCategory = cat;
-        $scope.loadProducts(cat.id);
-    }
-
-    // Init view by loading all products
-    $scope.loadProducts('departments');
-}
+});

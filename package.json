@@ -1,9 +1,9 @@
 {
-  "version": "0.0.0",
-  "private": true,
-  "name": "bb-mvc",
-  "description": "A sample MVC application for Best Buy",
-  "repository": "https://github.com/acolpitts/bb-mvc.git",
+  "version": "0.0.1",
+  "private": false,
+  "name": "ngSeed",
+  "description": "AngularJS + Node.js seed project",
+  "repository": "https://github.com/acolpitts/ngSeed.git",
   "license": "MIT",
   "devDependencies": {
     "karma": "^0.12.16",
