@@ -10,12 +10,13 @@ module.exports = function (grunt) {
   };
 
   grunt.initConfig({
-
+    /*
     serve: {
       options: {
         port: 9000
       }
     },
+    */
     nodewebkit: {
       options: {
         platforms: ['win','osx'],
@@ -28,11 +29,11 @@ module.exports = function (grunt) {
     }
   })
 
-  grunt.loadNpmTasks('grunt-serve');
+ // grunt.loadNpmTasks('grunt-serve');
 
   grunt.loadNpmTasks('grunt-node-webkit-builder');
 
   // Default task(s).
-  grunt.registerTask('default', ['serve']);
+  grunt.registerTask('default', ['nodewebkit']);
 
 }

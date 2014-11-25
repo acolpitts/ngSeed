@@ -16,5 +16,6 @@ Getting Started
 4. Browse to app (http://localhost:8000/app)
 5. Run unit tests (npm test)
 6. Run e2e test (npm run protractor)
+7. Build webkit app (grunt nodewebkit)
 
 
